@@ -11,7 +11,7 @@ let alertContainer = document.querySelector("#alertContainer");
 let submitContainer = document.querySelector("#submitContainer");
 let quizContainer = document.getElementById("quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
-let displayResult = document.querySelector("#displayResult");
+let displayResult = document.getElementById("displayResult");
 
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
@@ -56,10 +56,10 @@ const loadQuiz = async () => {
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  // if (!data) {
-  //   quizContainer.innerHTML = "";
-  //   return;
-  // }
+  if (!data) {
+    quizContainer.innerHTML = "";
+    return;
+  }
 
   data.forEach((quiz,i) => {
     console.log(quiz.question)
@@ -113,7 +113,7 @@ document.getElementById("submit").addEventListener("click", () => {
   }
 
   // data setting on local storage and getting data from local storage
-  let storage = JSON.parse(localStorage.getItem("result"));
+  let storage =JSON.parse(localStorage.getItem("results"));
   if (storage) {
     localStorage.setItem(
       "results",
@@ -168,9 +168,7 @@ document.getElementById("submit").addEventListener("click", () => {
     <div>Grade</div>
     <div>Time</div>
     </div>
-    ${storage
-      ?.reverse()
-      ?.map(
+    ${storage?.reverse()?.map(
         (item) => `<div
       class="flex justify-between items-center border rounded p-2 my-2 shadow-sm">
       <div>${item.marks}/60</div>

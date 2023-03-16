@@ -1,6 +1,8 @@
 // এই পুরো ফাইলে কেও কোন কিছু পরিবর্তন করবেন না । এইখানে কোন Bug নেই ।
 
 // Handle Timer
+// I think this function used for counting time.How many time to take for answering six questions.
+// if limited time crossed then show one color,otherwise show different color.
 const quizTimer = (dismiss) => {
   if (dismiss) {
     clearInterval(timer);
@@ -46,6 +48,7 @@ const displayQuizOptions = (quiz, i) => {
 };
 
 // select or choose quiz
+// I think this function used for  select options from questions data and give right answer when choose any wrong answer
 const chooseQuiz = (index, givenAns) => {
   const isExist = answers.find((ans) => ans.id === quizData[index].id);
   if (isExist) {

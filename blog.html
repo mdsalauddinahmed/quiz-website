@@ -13,6 +13,9 @@
         h4{
             font-size: 30px;
         }
+        p{
+            font-size: 20px;
+        }
         li{
             margin: 10px;
             font-size: 20px;
@@ -36,7 +39,11 @@
         <li><span>sessionStorage</span>5mb storage, Expiry depends on the setting  and working per window or tab,client side reading only and less older browser support </li>
         <li><span>cookies</span>4kb storage,it's  session based, and working per window or tab,server and client side reading . More older browser support </li>
        </ul>
-    <h4>3.what is Event loop and how its work?</h4>
+    <h4>3.what is Event loop and how does its work?</h4>
+     <p>
+        JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.
+        Event loop in JavaScript is a mechanism through which the 'calls waiting for execution' in the callback queue can be put on the call stack.setTimeout()and setInterval() method work for this.Thats why its work asynchronous way.
+     </p>
 
      
 </body>

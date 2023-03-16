@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=h2, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog</title>
+     <style>
+        .container{
+            max-width: 1024px;
+            margin: auto;
+        }
+        h4{
+            font-size: 30px;
+        }
+        li{
+            margin: 10px;
+            font-size: 20px;
+        }
+     </style>
 </head>
-<body>
-    <h1>Hello world</h1>
+<body class="container">
+    <h1>There are three types of requirement questions</h1>
+    <h4>1.What is the difference between map,filter,foreach and find?</h4>
+     <p>
+        <ul>
+            <li>map() creates a new array from calling a function for every array element.It Calls a function once for each element in an array.Then does not execute the function for empty element and change the original array.</li>
+            <li>forEach() method calls a function for each element in an array and it is not executed for empty elements.</li>
+            <li> find() method returns the value of the first element that passes a test  executes a function for each array element.It also returns undefined if no elements are found.Does not execute the function for empty elements and does not change the original array</li>
+            <li>The filter() method creates a new array filled with elements that pass a test provided by a function.This method also does not execute the function for empty elements and does not change the original array.  </li>
+        </ul>
+     </p>
+    <h4>2.What is the difference between localStorage,sessionStorage and cookies?</h4>
+       <ul>
+        <li><span>localStorage</span>5mb or 10mb storage,its not session based,need to be deleted via JS or manually,client side reading only and less older browser support </li>
+        <li><span>sessionStorage</span>5mb storage, Expiry depends on the setting  and working per window or tab,client side reading only and less older browser support </li>
+        <li><span>cookies</span>4kb storage,it's  session based, and working per window or tab,server and client side reading . More older browser support </li>
+       </ul>
+    <h4>3.what is Event loop and how its work?</h4>
+
+     
 </body>
 </html>
